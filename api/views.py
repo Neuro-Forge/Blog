@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status, generics, mixins
 
 
-class get_products(generics.ListCreateAPIView):
+class get_products(generics.ListCreateAPIView, generics.RetrieveUpdateDestroyAPIView):
     queryset = product.objects.all()
     serializer_class = productSerializer
     
